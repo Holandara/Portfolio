@@ -13,7 +13,8 @@ import TSIcon from "./public/typescript.svg";
 import FlutterIcon from "./public/flutter.svg";
 import GitIcon from "./public/git.svg";
 import Aurora from "./public/aurora.gif";
-import Curso from "./public/curso.svg";
+import Curso from "./public/curso.png";
+import Joguinho from "./public/joguinho.gif";
 
 const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRoleIndex: number }) => (
     <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl">
@@ -136,17 +137,17 @@ const ProjectsSection = () => {
         {
             icon: Aurora,
             title: "Aurora",
-            items: ["Projeto de aplicativo para mulheres vítima de violência doméstica"],
-            habilidades: ["Figma", "Flutter", "ui/ux design"],
+            items: ["[Em Progresso 🚧] Projeto da faculdade de aplicativo para mulheres vítima de violência doméstica, toda a documentação foi estudada e feita com metodologias ágeis, a prototipagem foi feita no figma"],
+            habilidades: ["Figma", "Flutter", "ui/ux design", "Documentação", "Metodologias Ágeis"],
         },
         {
             icon: Curso,
             title: "Site de Cursos",
-            items: ["Projeto de site de cursos presenciais de educação física"],
+            items: ["Site responsivo de cursos presenciais de educação física. Com futura integração de pagamento"],
             habilidades: ["Figma", "React JS", "Tailwind CSS"],
         },
         {
-            icon: ReactIcon,
+            icon: Joguinho,
             title: "Joguinho",
             items: ["Joguinho feito num feriado de carnaval em Python, toda a arte e design foi feita por mim!"],
             habilidades: ["PyGame", "Python", "ui/ux design", "Ilustração", "Sprites", "Aseprite"],
@@ -162,10 +163,23 @@ const ProjectsSection = () => {
                 viewport={{ once: true }}
                 className="md:sticky md:top-1/2 md:-translate-y-1/2 md:w-1/3 px-4 py-5 mb-1"
             >
+                
                 <div className="font-typographica text-5xl md:text-7xl bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
                     PROJETOS
                 </div>
-                <div className="bg-amber-50 h-1 w-10" />
+                
+
+                <div className="pt-4 col-span-2 text-2xl">
+                        <div className="bg-amber-50 h-1 w-10" />
+                        Soft Skills
+                    </div>
+                    <div className="gap-1">
+                    <SoftSkill title="Freelancers" />
+                    <SoftSkill title="Faculdade" />
+                    <SoftSkill title="Projetos pessoais" />
+                    
+                    </div>
+                
             </motion.div>
 
             <motion.div
@@ -173,7 +187,7 @@ const ProjectsSection = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6 px-4"
+                className="w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6 px-0"
             >
                 {projects.map((project, index) => (
                     <motion.div key={index} variants={item} whileHover={{ scale: 1.04 }}>
