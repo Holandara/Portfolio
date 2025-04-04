@@ -20,6 +20,7 @@ import SomosTech from "./public/somostech.webp";
 
 
 const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRoleIndex: number }) => (
+    
     <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl">
         <div className="justify-start">Oie! Eu me chamo</div>
         <div className="py-10 md:text-7xl font-typographica text-6xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
@@ -43,6 +44,9 @@ const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRole
         </div>
     </div>
 );
+
+
+    
 
 const SkillsSection = () => {
     const container = {
@@ -148,7 +152,7 @@ const ProjectsSection = () => {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
+                staggerChildren: 0.3,
                 delayChildren: 0.1,
             },
         },
@@ -194,7 +198,7 @@ const ProjectsSection = () => {
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 1 }}
                 viewport={{ once: true }}
                 className="md:sticky md:top-1/2 md:-translate-y-1/2 md:w-1/3 px-4 py-5 mb-1"
             >
@@ -256,6 +260,13 @@ export default function Home() {
             <SkillsSection />
             <ProjectsSection />
             <ContactMe />
+            <div className="fixed bottom-4 right-4">
+            <motion.div whileHover={{ scale: 1.04 }}>
+            <div className ="bg-purple hover:bg-danger  hover:border-amber-50 text-white font-bold py-2 px-4 rounded-full shadow-lg tooltip-default">
+            🛠️ Ainda em desenvolvimento!
+            </div>
+            </motion.div>
+            </div>
         </main>
     );
 }
