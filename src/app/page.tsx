@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { SkillCard } from "@/app/components/skillcard";
 import { SoftSkill } from "@/app/components/softskills";
 import { Projetos } from "@/app/components/projetos";
+import { ContactMe } from "@/app/components/ContactMe";
 import JSIcon from "./public/JS.svg";
 import ReactIcon from "./public/reactlogo.svg";
 import TailwindIcon from "./public/tailwind.svg";
@@ -15,12 +16,14 @@ import GitIcon from "./public/git.svg";
 import Aurora from "./public/aurora.gif";
 import Curso from "./public/curso.png";
 import Joguinho from "./public/joguinho.gif";
+import SomosTech from "./public/somostech.webp";
+
 
 const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRoleIndex: number }) => (
     <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl">
         <div className="justify-start">Oie! Eu me chamo</div>
-        <div className="font-typographica text-7xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
-            SAROLANDA
+        <div className="py-10 md:text-7xl font-typographica text-6xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
+            SARA  HOLANDA
         </div>
         <div className="flex items-center justify-center gap-2 mt-4 text-xl md:text-2xl">
             <div className="relative h-10 inline-flex items-center">
@@ -78,14 +81,14 @@ const SkillsSection = () => {
                 viewport={{ once: true }}
                 className="md:sticky md:top-1/2 md:-translate-y-1/2 md:w-1/3 px-4"
             >
-                <div className="font-typographica text-5xl md:text-7xl bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
-                    HARD SKILLS
-                </div>
-                <div className="grid-flow-row-dense w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-1 px-1 whitespace-nowrap">
-                    <div className="pt-4 col-span-2 text-2xl">
+
+                {/* GAMBIARRA */}
+                <div className="visible md:invisible grid-flow-row-dense w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-1 px-1 whitespace-nowrap">
+                    <div className="pt-4 col-span-2 text-2xl ">
                         <div className="bg-amber-50 h-1 w-10" />
                         Soft Skills
                     </div>
+                    
                     <div className="gap-1">
                     <SoftSkill title="Inglês Avançado" />
                     <SoftSkill title="Scrum" />
@@ -93,6 +96,27 @@ const SkillsSection = () => {
                     <SoftSkill title="Comunicação" />
                     <SoftSkill title="Trabalho em equipe" />
                     <SoftSkill title="Proatividade" />
+
+                    </div>
+                </div>
+                {/* fim da GAMBIARRA */}
+                <div className="mt-10 mb-[-190] md:mb-0 font-typographica text-5xl md:text-7xl bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
+                    HARD SKILLS
+                </div>
+                <div className="md:visible collapse grid-flow-row-dense w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-1 px-1 whitespace-nowrap">
+                    <div className="pt-4 col-span-2 text-2xl ">
+                        <div className="bg-amber-50 h-1 w-10" />
+                        Soft Skills
+                    </div>
+
+                    <div className="gap-1">
+                    <SoftSkill title="Inglês Avançado" />
+                    <SoftSkill title="Scrum" />
+                    <SoftSkill title="Desenvolvimento ágil" />
+                    <SoftSkill title="Comunicação" />
+                    <SoftSkill title="Trabalho em equipe" />
+                    <SoftSkill title="Proatividade" />
+
                     </div>
                 </div>
             </motion.div>
@@ -113,6 +137,8 @@ const SkillsSection = () => {
         </div>
     );
 };
+
+
 
 
 
@@ -137,20 +163,29 @@ const ProjectsSection = () => {
         {
             icon: Aurora,
             title: "Aurora",
-            items: ["[Em Progresso 🚧] Projeto da faculdade de aplicativo para mulheres vítima de violência doméstica, toda a documentação foi estudada e feita com metodologias ágeis, a prototipagem foi feita no figma"],
+            items: ["[ Em Progresso!! 🚧]", "Projeto da faculdade de aplicativo para mulheres vítimas de violência doméstica", 
+                "Toda a documentação foi estudada e feita com metodologias ágeis, a prototipagem foi feita no figma. "],
             habilidades: ["Figma", "Flutter", "ui/ux design", "Documentação", "Metodologias Ágeis"],
         },
         {
             icon: Curso,
             title: "Site de Cursos",
-            items: ["Site responsivo de cursos presenciais de educação física. Com futura integração de pagamento"],
+            items: ["Site responsivo de cursos presenciais de educação física. Com futura integração de pagamento."],
             habilidades: ["Figma", "React JS", "Tailwind CSS"],
         },
         {
             icon: Joguinho,
             title: "Joguinho",
-            items: ["Joguinho feito num feriado de carnaval em Python, toda a arte e design foi feita por mim!"],
+            items: ["Joguinho feito com a biblioteca PyGame.",
+                "Toda a arte e design foi feita por mim!"],
             habilidades: ["PyGame", "Python", "ui/ux design", "Ilustração", "Sprites", "Aseprite"],
+        },
+        {
+            icon: SomosTech,
+            title: "Somos_Tech",
+            items: ["Desenvolvedora front-end e designer na comunidade criada por mulheres e pra mulheres apaixonadas por tecnologia.",
+                " "],
+            habilidades: ["Angular", "Congressos","Hackathons"],
         },
     ];
 {/* PROJETOS */}
@@ -203,7 +238,7 @@ const ProjectsSection = () => {
         </div>
     );
 };
-{/* Estrutura da página */}
+ {/* Estrutura da página */}
 export default function Home() {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
     const roles = ["Web Developer", "Frontend Developer", "UI/UX Designer", "React Developer"];
@@ -220,6 +255,7 @@ export default function Home() {
             <HeroSection roles={roles} currentRoleIndex={currentRoleIndex} />
             <SkillsSection />
             <ProjectsSection />
+            <ContactMe />
         </main>
     );
 }
