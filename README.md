@@ -1,5 +1,5 @@
 # Portfolio
-⌛On Progres...
+⌛On Progress...
 Remaking my portfolio using:
 - ReactJS
 - NextJS
