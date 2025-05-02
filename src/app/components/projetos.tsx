@@ -7,8 +7,8 @@ interface ProjetosProps {
   icon: StaticImageData;
   items?: string[]; 
   habilidades: string[];
-  link: string;
-  github: string;
+  link?: string;
+  github?: string;
 }
 
 
