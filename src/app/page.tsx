@@ -5,6 +5,7 @@ import { SkillCard } from "@/app/components/skillcard";
 import { SoftSkill } from "@/app/components/softskills";
 import { Projetos } from "@/app/components/projetos";
 import { ContactMe } from "@/app/components/ContactMe";
+// ícones
 import JSIcon from "./public/JS.svg";
 import ReactIcon from "./public/reactlogo.svg";
 import TailwindIcon from "./public/tailwind.svg";
