@@ -20,6 +20,7 @@ var aurora_gif_1 = require("./public/aurora.gif");
 var curso_png_1 = require("./public/curso.png");
 var joguinho_gif_1 = require("./public/joguinho.gif");
 var somostech_webp_1 = require("./public/somostech.webp");
+var logo_digiteam_png_1 = require("./public/logo_digiteam.png");
 var HeroSection = function (_a) {
     var roles = _a.roles, currentRoleIndex = _a.currentRoleIndex;
     return (React.createElement("div", { className: "bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl" },
@@ -117,14 +118,25 @@ var ProjectsSection = function () {
             title: "Joguinho",
             items: ["Joguinho feito com a biblioteca PyGame.",
                 "Toda a arte e design foi feita por mim!"],
-            habilidades: ["PyGame", "Python", "ui/ux design", "Ilustração", "Sprites", "Aseprite"]
+            habilidades: ["PyGame", "Python", "ui/ux design", "Ilustração", "Sprites", "Aseprite"],
+            github: "https://github.com/Holandara/pythonProject"
         },
         {
             icon: somostech_webp_1["default"],
             title: "Somos_Tech",
             items: ["Desenvolvedora front-end e designer na comunidade criada por mulheres e pra mulheres apaixonadas por tecnologia.",
                 " "],
-            habilidades: ["Angular", "Congressos", "Hackathons"]
+            habilidades: ["Angular", "Congressos", "Hackathons"],
+            link: "somostech.tech"
+        },
+        {
+            icon: logo_digiteam_png_1["default"],
+            title: "Gestão de Licenças",
+            items: ["Desafio para vaga de front-end Junior, onde é desenvolvido um ambiente de gerenciamento de licenças com regras de limite de login. Logue com user: admin e senha: Admin@123",
+                " "],
+            habilidades: ["Angular 19", "PrimeNG", "TailwindCSS", "TypeScript"],
+            link: "https://junior-desafio.vercel.app/login",
+            github: "https://github.com/Holandara/junior-desafio"
         },
     ];
     { /* PROJETOS */ }
@@ -133,13 +145,14 @@ var ProjectsSection = function () {
             React.createElement("div", { className: "font-typographica text-5xl md:text-7xl bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent" }, "PROJETOS"),
             React.createElement("div", { className: "pt-4 col-span-2 text-2xl" },
                 React.createElement("div", { className: "bg-amber-50 h-1 w-10" }),
-                "Soft Skills"),
+                "Front-end"),
             React.createElement("div", { className: "gap-1" },
                 React.createElement(softskills_1.SoftSkill, { title: "Freelancers" }),
                 React.createElement(softskills_1.SoftSkill, { title: "Faculdade" }),
-                React.createElement(softskills_1.SoftSkill, { title: "Projetos pessoais" }))),
+                React.createElement(softskills_1.SoftSkill, { title: "Projetos pessoais" }),
+                React.createElement(softskills_1.SoftSkill, { title: "Desafios" }))),
         React.createElement(framer_motion_1.motion.div, { variants: container, initial: "hidden", whileInView: "show", viewport: { once: true }, className: "w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6 px-0" }, projects.map(function (project, index) { return (React.createElement(framer_motion_1.motion.div, { key: index, variants: item, whileHover: { scale: 1.04 } },
-            React.createElement(projetos_1.Projetos, { icon: project.icon, title: project.title, items: project.items, habilidades: project.habilidades }))); }))));
+            React.createElement(projetos_1.Projetos, { icon: project.icon, title: project.title, items: project.items, habilidades: project.habilidades, link: project.link, github: project.github }))); }))));
 };
 { /* Estrutura da página */ }
 function Home() {

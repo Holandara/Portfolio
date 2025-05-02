@@ -7,9 +7,12 @@ interface ProjetosProps {
   icon: StaticImageData;
   items?: string[]; 
   habilidades: string[];
+  link: string;
+  github: string;
 }
 
-export const Projetos = ({ title, icon, items = [], habilidades }: ProjetosProps) => {
+
+export const Projetos = ({ title, icon, items = [], habilidades, link, github }: ProjetosProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -42,6 +45,28 @@ export const Projetos = ({ title, icon, items = [], habilidades }: ProjetosProps
               ))}
             </div>
           </ul>
+              <div className="mt-4">
+              {link && (
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 font-bold  bg-purple hover:bg-white p-2 rounded-full px-4 text-white hover:text-black transition"
+                >
+                  Conferir
+                </a>       
+              )}
+              {github && (
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 font-bold  bg-purple hover:bg-white p-2 rounded-full px-4 text-white hover:text-black transition"
+                >
+                  Repositório
+                </a>       
+              )}
+              </div>
         </div>
       </div> 
     </motion.div>

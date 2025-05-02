@@ -18,7 +18,7 @@ import Aurora from "./public/aurora.gif";
 import Curso from "./public/curso.png";
 import Joguinho from "./public/joguinho.gif";
 import SomosTech from "./public/somostech.webp";
-
+import Digiteam from "./public/logo_digiteam.png"
 
 const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRoleIndex: number }) => (
     
@@ -184,6 +184,7 @@ const ProjectsSection = () => {
             items: ["Joguinho feito com a biblioteca PyGame.",
                 "Toda a arte e design foi feita por mim!"],
             habilidades: ["PyGame", "Python", "ui/ux design", "Ilustração", "Sprites", "Aseprite"],
+            github: "https://github.com/Holandara/pythonProject"
         },
         {
             icon: SomosTech,
@@ -191,6 +192,16 @@ const ProjectsSection = () => {
             items: ["Desenvolvedora front-end e designer na comunidade criada por mulheres e pra mulheres apaixonadas por tecnologia.",
                 " "],
             habilidades: ["Angular", "Congressos","Hackathons"],
+            link:"somostech.tech"
+        },
+        {
+            icon: Digiteam,
+            title: "Gestão de Licenças",
+            items: ["Desafio para vaga de front-end Junior, onde é desenvolvido um ambiente de gerenciamento de licenças com regras de limite de login. Logue com user: admin e senha: Admin@123",
+                " "],
+            habilidades: ["Angular 19", "PrimeNG","TailwindCSS","TypeScript"],
+            link: "https://junior-desafio.vercel.app/login",
+            github: "https://github.com/Holandara/junior-desafio"
         },
     ];
 {/* PROJETOS */}
@@ -211,13 +222,13 @@ const ProjectsSection = () => {
 
                 <div className="pt-4 col-span-2 text-2xl">
                         <div className="bg-amber-50 h-1 w-10" />
-                        Soft Skills
+                        Front-end
                     </div>
                     <div className="gap-1">
                     <SoftSkill title="Freelancers" />
                     <SoftSkill title="Faculdade" />
                     <SoftSkill title="Projetos pessoais" />
-                    
+                    <SoftSkill title="Desafios" />
                     </div>
                 
             </motion.div>
@@ -236,6 +247,8 @@ const ProjectsSection = () => {
                             title={project.title}
                             items={project.items}
                             habilidades={project.habilidades}
+                            link={project.link}
+                            github={project.github}
                         />
                     </motion.div>
                 ))}
