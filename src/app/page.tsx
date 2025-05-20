@@ -19,6 +19,7 @@ import Curso from "./public/curso.png";
 import Joguinho from "./public/joguinho.gif";
 import SomosTech from "./public/somostech.webp";
 import Digiteam from "./public/logo_digiteam.png"
+import Nabuquizz from "./public/Nabuquizz.png";
 
 const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRoleIndex: number }) => (
     
@@ -71,7 +72,7 @@ const SkillsSection = () => {
         { icon: ReactIcon, title: "React JS", items: ["UIX Design", "React Hooks", "Styled Components"] },
         { icon: TailwindIcon, title: "Tailwind CSS", items: ["UI/UX Design", "Componentes", "Responsividade", "Animações"] },
         { icon: FigmaIcon, title: "Figma", items: ["Wireframes", "Prototipagem", "UI/UX Design", "Design System"] },
-        { icon: NodeIcon, title: "Node.js", items: ["Servidores", "APIs REST", "Conexão com bancos de dados"] },
+        { icon: NodeIcon, title: "Node.js", items: ["Servidores", "APIs REST"] },
         { icon: TSIcon, title: "TypeScript", items: ["Interfaces", "Lógica de Programação", "Estrutura de Dados"] },
         { icon: GitIcon, title: "Git", items: ["Controle de versão", "Branches", "Pull Requests", "Issues"] },
         { icon: FlutterIcon, title: "Flutter", items: ["UI/UX Design", "Componentes", "Responsividade", "Animações"] },
@@ -154,7 +155,7 @@ const ProjectsSection = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.3,
-                delayChildren: 0.1,
+                delayChildren: 0.5,
             },
         },
     };
@@ -202,6 +203,15 @@ const ProjectsSection = () => {
             habilidades: ["Angular 19", "PrimeNG","TailwindCSS","TypeScript"],
             link: "https://junior-desafio.vercel.app/login",
             github: "https://github.com/Holandara/junior-desafio"
+        },
+        {
+            icon: Nabuquizz,
+            title: "Nabuquizz",
+            items: ["App de quizz insipirado no Nabuco, meu cachorro, utilizando Flutter, toda a arte foi feita por mim.",
+                " "],
+            habilidades: ["Flutter 3", "AndroidStudio","Figma","ClipStudioPaint"],
+            
+            github: "https://github.com/Holandara/Nabuquizz"
         },
     ];
 {/* PROJETOS */}
@@ -276,9 +286,9 @@ export default function Home() {
             <ContactMe />
             <div className="fixed bottom-4 right-4">
             <motion.div whileHover={{ scale: 1.04 }}>
-            <div className ="bg-purple hover:bg-danger  hover:border-amber-50 text-white font-bold py-2 px-4 rounded-full shadow-lg tooltip-default">
+            {/* <div className ="bg-purple hover:bg-danger  hover:border-amber-50 text-white font-bold py-2 px-4 rounded-full shadow-lg tooltip-default">
             🛠️ Ainda em desenvolvimento!
-            </div>
+            </div> */}
             </motion.div>
             </div>
         </main>

@@ -105,7 +105,7 @@ export const ContactMe = () => {
         variants={itemVariants}
         className="mt-16 text-sm text-gray-400"
       >
-        © {new Date().getFullYear()} Sarolanda. Todos os direitos reservados.
+        © {new Date().getFullYear()} Sara Holanda. Todos os direitos reservados.
       </motion.div>
     </motion.section>
   );
