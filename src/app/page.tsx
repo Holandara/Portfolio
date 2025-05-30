@@ -5,22 +5,33 @@ import { SkillCard } from "@/app/components/skillcard";
 import { SoftSkill } from "@/app/components/softskills";
 import { Projetos } from "@/app/components/projetos";
 import { ContactMe } from "@/app/components/ContactMe";
+import Image, { StaticImageData } from 'next/image';
 // ícones
-import JSIcon from "./public/JS.svg";
-import ReactIcon from "./public/reactlogo.svg";
-import TailwindIcon from "./public/tailwind.svg";
-import FigmaIcon from "./public/figma.svg";
-import NodeIcon from "./public/nodejs.svg";
-import TSIcon from "./public/typescript.svg";
-import FlutterIcon from "./public/flutter.svg";
-import GitIcon from "./public/git.svg";
-import Aurora from "./public/aurora.gif";
-import Curso from "./public/curso.png";
-import Joguinho from "./public/joguinho.gif";
-import SomosTech from "./public/somostech.webp";
-import Digiteam from "./public/logo_digiteam.png"
-import Nabuquizz from "./public/Nabuquizz.png";
+import CriaProjetos from "@/app/components/projetosDados";
 
+import habilidades from "@/app/components/skills";
+
+
+interface ProjectProps {
+    icon: StaticImageData;
+    title: string;
+    items: string[];
+    habilidades: string[];
+    link?: string;
+    github?: string;
+}
+
+interface SkillProps {
+    icon: StaticImageData;
+    title: string;
+    items: string[];
+}
+
+interface SkillCardProps {
+    icon: string; 
+    title: string;
+    items: string[];
+}
 const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRoleIndex: number }) => (
     
     <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl">
@@ -46,18 +57,14 @@ const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRole
         </div>
     </div>
 );
-
-
-    
-
 const SkillsSection = () => {
     const container = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1,
+                staggerChildren: 0.3,
+                delayChildren: 0.5,
             },
         },
     };
@@ -66,17 +73,8 @@ const SkillsSection = () => {
         hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0 },
     };
+    
 
-    const skills = [
-        { icon: JSIcon, title: "Javascript", items: ["Lógica de programação", "Estrutura de dados", "API's"] },
-        { icon: ReactIcon, title: "React JS", items: ["UIX Design", "React Hooks", "Styled Components"] },
-        { icon: TailwindIcon, title: "Tailwind CSS", items: ["UI/UX Design", "Componentes", "Responsividade", "Animações"] },
-        { icon: FigmaIcon, title: "Figma", items: ["Wireframes", "Prototipagem", "UI/UX Design", "Design System"] },
-        { icon: NodeIcon, title: "Node.js", items: ["Servidores", "APIs REST"] },
-        { icon: TSIcon, title: "TypeScript", items: ["Interfaces", "Lógica de Programação", "Estrutura de Dados"] },
-        { icon: GitIcon, title: "Git", items: ["Controle de versão", "Branches", "Pull Requests", "Issues"] },
-        { icon: FlutterIcon, title: "Flutter", items: ["UI/UX Design", "Componentes", "Responsividade", "Animações"] },
-    ];
 
     return (
         <div className="min-h-screen flex flex-col md:flex-row items-start md:items-top gap-8 mt-50">
@@ -126,27 +124,25 @@ const SkillsSection = () => {
                     </div>
                 </div>
             </motion.div>
-
-            <motion.div
+                <motion.div
                 variants={container}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6"
+                className="w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6 px-0"
             >
-                {skills.map((skill, index) => (
-                    <motion.div key={index} variants={item} whileHover={{ scale: 1.04 }}>
-                        <SkillCard icon={skill.icon} title={skill.title} items={skill.items} />
-                    </motion.div>
+            {habilidades.map((skill, index) => (
+                <SkillCard
+                    key={index}
+                    icon={skill.icon}
+                    title={skill.title}
+                    items={skill.items}
+                />
                 ))}
             </motion.div>
         </div>
     );
 };
-
-
-
-
 
 const ProjectsSection = () => {
     const container = {
@@ -165,55 +161,18 @@ const ProjectsSection = () => {
         show: { opacity: 1, y: 0 },
     };
 
-    const projects = [
-        {
-            icon: Aurora,
-            title: "Aurora",
-            items: ["[ Em Progresso!! 🚧]", "Projeto da faculdade de aplicativo para mulheres vítimas de violência doméstica", 
-                "Toda a documentação foi estudada e feita com metodologias ágeis, a prototipagem foi feita no figma. "],
-            habilidades: ["Figma", "Flutter", "ui/ux design", "Documentação", "Metodologias Ágeis"],
-        },
-        {
-            icon: Curso,
-            title: "Site de Cursos",
-            items: ["Site responsivo de cursos presenciais de educação física. Com futura integração de pagamento."],
-            habilidades: ["Figma", "React JS", "Tailwind CSS"],
-        },
-        {
-            icon: Joguinho,
-            title: "Joguinho",
-            items: ["Joguinho feito com a biblioteca PyGame.",
-                "Toda a arte e design foi feita por mim!"],
-            habilidades: ["PyGame", "Python", "ui/ux design", "Ilustração", "Sprites", "Aseprite"],
-            github: "https://github.com/Holandara/pythonProject"
-        },
-        {
-            icon: SomosTech,
-            title: "Somos_Tech",
-            items: ["Desenvolvedora front-end e designer na comunidade criada por mulheres e pra mulheres apaixonadas por tecnologia.",
-                " "],
-            habilidades: ["Angular", "Congressos","Hackathons"],
-            link:"somostech.tech"
-        },
-        {
-            icon: Digiteam,
-            title: "Gestão de Licenças",
-            items: ["Desafio para vaga de front-end Junior, onde é desenvolvido um ambiente de gerenciamento de licenças com regras de limite de login. Logue com user: admin e senha: Admin@123",
-                " "],
-            habilidades: ["Angular 19", "PrimeNG","TailwindCSS","TypeScript"],
-            link: "https://junior-desafio.vercel.app/login",
-            github: "https://github.com/Holandara/junior-desafio"
-        },
-        {
-            icon: Nabuquizz,
-            title: "Nabuquizz",
-            items: ["App de quizz insipirado no Nabuco, meu cachorro, utilizando Flutter, toda a arte foi feita por mim.",
-                " "],
-            habilidades: ["Flutter 3", "AndroidStudio","Figma","ClipStudioPaint"],
-            
-            github: "https://github.com/Holandara/Nabuquizz"
-        },
-    ];
+// function createProject(cardProps){
+//     return (
+//         // icon = cardProps.icon,
+//         <Projetos
+//         title = {cardProps.title}
+//         items = {cardProps.items}
+//         habilidades = {cardProps.habilidades}
+//         github = {cardProps.github}
+//         />
+//     )
+// }
+
 {/* PROJETOS */}
     return (
         <div className="min-h-screen flex flex-col md:flex-row items-start md:items-top gap-8 py-12 mt-50">
@@ -250,7 +209,7 @@ const ProjectsSection = () => {
                 viewport={{ once: true }}
                 className="w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6 px-0"
             >
-                {projects.map((project, index) => (
+                {CriaProjetos.map((project, index) => (
                     <motion.div key={index} variants={item} whileHover={{ scale: 1.04 }}>
                         <Projetos
                             icon={project.icon}
@@ -266,6 +225,7 @@ const ProjectsSection = () => {
         </div>
     );
 };
+
  {/* Estrutura da página */}
 export default function Home() {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
@@ -286,9 +246,6 @@ export default function Home() {
             <ContactMe />
             <div className="fixed bottom-4 right-4">
             <motion.div whileHover={{ scale: 1.04 }}>
-            {/* <div className ="bg-purple hover:bg-danger  hover:border-amber-50 text-white font-bold py-2 px-4 rounded-full shadow-lg tooltip-default">
-            🛠️ Ainda em desenvolvimento!
-            </div> */}
             </motion.div>
             </div>
         </main>

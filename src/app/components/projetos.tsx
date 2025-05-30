@@ -4,7 +4,7 @@ import { SoftSkill } from '@/app/components/softskills';
 
 interface ProjetosProps {
   title: string;
-  icon: StaticImageData;
+  icon: string | StaticImageData;
   items?: string[]; 
   habilidades: string[];
   link?: string;
@@ -14,7 +14,7 @@ interface ProjetosProps {
 
 export const Projetos = ({ title, icon, items = [], habilidades, link, github }: ProjetosProps) => {
   return (
-    <motion.div
+    <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

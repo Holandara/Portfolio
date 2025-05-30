@@ -4,7 +4,7 @@ import Image, { StaticImageData } from 'next/image';
 
 interface SkillCardProps {
   title: string;
-  icon: StaticImageData;
+  icon: string;
   items: string[];
 }
 

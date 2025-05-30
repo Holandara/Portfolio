@@ -11,7 +11,7 @@ type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
+    name: '',   
     email: '',
     message: ''
   });
