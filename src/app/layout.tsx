@@ -18,6 +18,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Sara Holanda Mesquita Tavares - Desenvolvedora Front-end',
   description: 'Portfólio de Sara Holanda Mesquita Tavares. Desenvolvedora especializada em React, UX e design responsivo.',
+   verification: {
+    google: 'ZNWYTtadiBGHgOClyIkoYbXMiaweBCdD4M8-OUlcsrA',
+  },
   keywords: ['Sara Holanda Mesquita Tavares', 'portfólio', 'frontend', 'React', 'desenvolvedora web'],
   authors: [{ name: 'Sara Holanda Mesquita Tavares' }],
   creator: 'Sara Holanda Mesquita Tavares',
