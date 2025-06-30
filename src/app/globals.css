@@ -45,20 +45,4 @@
     scrollbar-color: #8b5cf6 #1f2937; /* thumb e track */
   }
 
-  /* Substitui o cursor padrão em todo o site */
 
-
-/* Cursor personalizado (círculo roxo com borda preta) */
-.custom-cursor {
-  position: fixed;
-  width: 24px;
-  height: 24px;
-  border: 2px solid black;       /* Borda preta */
-  background: rgba(168, 85, 247, 0.5); /* Roxo com transparência (ajuste a cor conforme seu tema) */
-  border-radius: 50%;            /* Deixa redondo */
-  pointer-events: none;          /* Não interfere com cliques */
-  z-index: 9999;                 /* Garante que fique acima de tudo */
-  transform: translate(-50%, -50%); /* Centraliza no ponteiro */
-  mix-blend-mode: difference;    /* Destaque em qualquer fundo (opcional) */
-  outline: 1px solid red;
-}

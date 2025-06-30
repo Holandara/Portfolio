@@ -8,37 +8,37 @@ interface Habilidade {
 
 const habilidades: Habilidade[] = [
   {
-    icon: "/skills/JS.svg",
+    icon: "images/skills/JS.svg",
     title: "Javascript",
     items: ["Lógica de programação", "Estrutura de dados", "API's"]
   },
   {
-    icon: "/skills/reactlogo.svg",
+    icon: "images/skills/reactlogo.svg",
     title: "React JS",
     items: ["UIX Design", "React Hooks", "Styled Components"]
   },
   {
-    icon: "/skills/tailwind.svg",
+    icon: "images/skills/tailwind.svg",
     title: "Tailwind CSS",
     items: ["UI/UX Design", "Componentes", "Responsividade", "Animações"]
   },
   {
-    icon: "/skills/figma.svg",
+    icon: "images/skills/figma.svg",
     title: "Figma",
     items: ["Wireframes", "Prototipagem", "UI/UX Design", "Design System"]
   },
   {
-    icon: "/skills/typescript.svg",
+    icon: "images/skills/typescript.svg",
     title: "TypeScript",
     items: ["Interfaces", "Lógica de Programação", "Estrutura de Dados"]
   },
   {
-    icon: "/skills/git.svg",
+    icon: "images/skills/git.svg",
     title: "Git",
     items: ["Controle de versão", "Branches", "Pull Requests", "Issues"]
   },
   {
-    icon: "/skills/flutter.svg",
+    icon: "images/skills/flutter.svg",
     title: "Flutter",
     items: ["UI/UX Design", "Componentes", "Responsividade", "Animações"]
   }

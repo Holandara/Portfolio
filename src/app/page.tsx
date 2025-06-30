@@ -1,13 +1,13 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { SkillCard } from "@/app/components/skillcard";
-import { SoftSkill } from "@/app/components/softskills";
-import { Projetos } from "@/app/components/projetos";
-import { ContactMe } from "@/app/components/ContactMe";
+import { SkillCard } from "./_components/ui/skillcard";
+import { SoftSkill } from "./_components/sections/softskills";
+import { Projetos } from "./_components/sections/projetos";
+import { ContactMe } from './_components/sections/ContactMe'
 import Image, { StaticImageData } from 'next/image';
-import CriaProjetos from "@/app/components/projetosDados";
-import habilidades from "@/app/components/skills";
+import CriaProjetos from "@/lib/projetosDados"
+import habilidades from "@/lib/skills";
 
 
 interface ProjectProps {
@@ -62,14 +62,14 @@ const SkillsSection = () => {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.3,
-                delayChildren: 0.5,
+                staggerChildren: 0.5,
+                delayChildren: 0.9,
             },
         },
     };
 
     const item = {
-        hidden: { opacity: 0, y: 20 },
+       hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0 },
     };
     return (
@@ -159,31 +159,30 @@ const ProjectsSection = () => {
 
 {/* PROJETOS */}
     return (
-        <div className="min-h-screen flex flex-col md:flex-row items-start md:items-top gap-8 py-12 mt-50">
+
+        <div className="flex flex-col items-center gap-12 py-12 px-4">
             <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="md:sticky md:top-1/2 md:-translate-y-1/2 md:w-1/3 px-4 py-5 mb-1"
+                className="flex flex-col items-center text-center gap-4"
             >
-                
                 <div className="font-typographica text-5xl md:text-7xl bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
                     PROJETOS
                 </div>
-                
 
-                <div className="pt-4 col-span-2 text-2xl">
-                        <div className="bg-amber-50 h-1 w-10" />
-                        Front-end
-                    </div>
-                    <div className="gap-1">
+                <div className="text-2xl">
+                    <div className="bg-amber-50 h-1 w-10 mx-auto" /> 
+                    Front-end
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-2 mt-2">
                     <SoftSkill title="Freelancers" />
                     <SoftSkill title="Faculdade" />
                     <SoftSkill title="Projetos pessoais" />
                     <SoftSkill title="Desafios" />
-                    </div>
-                
+                </div>
             </motion.div>
 
             <motion.div
@@ -191,7 +190,7 @@ const ProjectsSection = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="w-full md:w-1/2 grid md:grid-cols-2 grid-cols-0 lg:grid-cols-2 gap-6 px-0"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl"
             >
                 {CriaProjetos.map((project, index) => (
                     <motion.div key={index} variants={item} whileHover={{ scale: 1.04 }}>
@@ -206,6 +205,7 @@ const ProjectsSection = () => {
                     </motion.div>
                 ))}
             </motion.div>
+
         </div>
     );
 };

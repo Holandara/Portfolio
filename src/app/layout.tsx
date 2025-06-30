@@ -30,13 +30,12 @@ export const metadata = {
     title: 'Sara Holanda Mesquita Tavares - UX Designer e Desenvolvedora Front-end',
     description:
       'Portfólio profissional com projetos em React, UI/UX, acessibilidade e design responsivo.',
-    url: 'https://portfolio-sarolanda.vercel.app/', // seu domínio real aqui
+    url: 'https://portfolio-sarolanda.vercel.app/', 
     siteName: 'Sara Holanda - Portfólio',
     locale: 'pt_BR',
     type: 'website',
   },
 };
-
 
 
 export default function RootLayout({
@@ -46,8 +45,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${typoGraphica.variable} ${montserrat.variable}`}>
-      <body className="bg-gray-900 text-gray-100 antialiased relative">
-        {/* Conteúdo principal (z-index baixo) */}
+      <body className="bg-black text-gray-100 antialiased relative overflow-x-hidden">
+        
+        {/* FAIXA DE LUZ ROXA */}
+        <div 
+          className="absolute top-0 left-0 h-full w-96 
+                     bg-gradient-to-b from-purple-900/30 to-transparent 
+                     blur-3xl -z-10 transform -skew-x-12" 
+        />
+
+        {/* FAIXA DE LUZ AZUL */}
+        <div 
+          className="absolute bottom-0 right-0 h-full w-96 
+                     bg-gradient-to-t from-blue-900/30 to-transparent 
+                     blur-3xl -z-10 transform skew-x-12"
+        />
+
         <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0 relative z-0">
           {children}
         </main>
