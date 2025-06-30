@@ -6,9 +6,7 @@ import { SoftSkill } from "@/app/components/softskills";
 import { Projetos } from "@/app/components/projetos";
 import { ContactMe } from "@/app/components/ContactMe";
 import Image, { StaticImageData } from 'next/image';
-// ícones
 import CriaProjetos from "@/app/components/projetosDados";
-
 import habilidades from "@/app/components/skills";
 
 
@@ -73,15 +71,12 @@ const SkillsSection = () => {
         hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0 },
     };
-    
-
-
     return (
         <div className="min-h-screen flex flex-col md:flex-row items-start md:items-top gap-8 mt-50">
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.01 }}
+                transition={{ duration: 1 }}
                 viewport={{ once: true }}
                 className="md:sticky md:top-1/2 md:-translate-y-1/2 md:w-1/3 px-4"
             >
@@ -160,18 +155,6 @@ const ProjectsSection = () => {
         hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0 },
     };
-
-// function createProject(cardProps){
-//     return (
-//         // icon = cardProps.icon,
-//         <Projetos
-//         title = {cardProps.title}
-//         items = {cardProps.items}
-//         habilidades = {cardProps.habilidades}
-//         github = {cardProps.github}
-//         />
-//     )
-// }
 
 {/* PROJETOS */}
     return (

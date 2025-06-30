@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
 
 interface Habilidade {
-  icon: string;  // Mudamos para string pois vamos usar caminhos diretos
+  icon: string; 
   title: string;
   items: string[];
 }
