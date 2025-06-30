@@ -31,7 +31,7 @@ interface SkillCardProps {
     items: string[];
 }
 const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRoleIndex: number }) => (
-    
+
     <div className="bg-clip-border z-10 h-screen flex flex-col justify-center items-center text-2xl">
         <div className="justify-start">Oie! Eu me chamo</div>
         <div className="py-10 md:text-7xl font-typographica text-6xl items-center text-center bg-gradient-to-r from-purple-500 to-danger bg-clip-text text-transparent">
@@ -54,6 +54,7 @@ const HeroSection = ({ roles, currentRoleIndex }: { roles: string[]; currentRole
             </div>
         </div>
     </div>
+
 );
 const SkillsSection = () => {
     const container = {
