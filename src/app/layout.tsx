@@ -15,17 +15,25 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 });
 
-export const metadata: Metadata = {
-  title: 'Sara Holanda Mesquita Tavares - Desenvolvedora Front-end',
-  description: 'Portfólio de Sara Holanda Mesquita Tavares. Desenvolvedora especializada em React, UX e design responsivo.',
-   verification: {
-    google: 'ZNWYTtadiBGHgOClyIkoYbXMiaweBCdD4M8-OUlcsrA',
-  },
-  keywords: ['Sara Holanda Mesquita Tavares', 'portfólio', 'frontend', 'React', 'desenvolvedora web'],
+export const metadata = {
+  title: 'Sara Holanda Mesquita Tavares - UX Designer e Desenvolvedora Front-end',
+  description:
+    'Portfólio profissional de Sara Holanda Mesquita Tavares. Desenvolvedora front-end especializada em React, UI/UX, acessibilidade e design responsivo. Confira projetos, habilidades e contato.',
+  keywords: ['Sara Holanda Mesquita Tavares', 'portfólio', 'frontend', 'UX', 'UX', 'designer', 'desenvolvedora web'],
   authors: [{ name: 'Sara Holanda Mesquita Tavares' }],
   creator: 'Sara Holanda Mesquita Tavares',
   robots: 'index, follow',
+  openGraph: {
+    title: 'Sara Holanda Mesquita Tavares - UX Designer e Desenvolvedora Front-end',
+    description:
+      'Portfólio profissional com projetos em React, UI/UX, acessibilidade e design responsivo.',
+    url: 'https://portfolio-sarolanda.vercel.app/', // seu domínio real aqui
+    siteName: 'Sara Holanda - Portfólio',
+    locale: 'pt_BR',
+    type: 'website',
+  },
 };
+
 
 
 export default function RootLayout({
