@@ -20,7 +20,7 @@ export const metadata = {
   description:
     'Portfólio profissional de Sara Holanda Mesquita Tavares. Desenvolvedora front-end especializada em React, UI/UX, acessibilidade e design responsivo. Confira projetos, habilidades e contato.',
   verification: {
-    google: 'ZNWYTtadiBGHgOClyIkoYbXMiaweBCdD4M8-OUlcsrA',
+    google: 'EItKFM4nQUWYCagMCcN7KgTBDkSN1GFmzTTrEXUg_38',
   },
     keywords: ['Sara Holanda Mesquita Tavares', 'portfólio', 'frontend', 'UX', 'UX', 'designer', 'desenvolvedora web'],
   authors: [{ name: 'Sara Holanda Mesquita Tavares' }],
