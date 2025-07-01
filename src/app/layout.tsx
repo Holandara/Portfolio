@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import localFont from 'next/font/local';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const typoGraphica = localFont({
   src: './fonts/TypoGraphica_demo.otf',
@@ -63,6 +63,7 @@ export default function RootLayout({
 
         <main className="max-w-[1240px] mx-auto px-5 py-8 md:py-0 relative z-0">
           {children}
+          <SpeedInsights />
         </main>
       </body>
     </html>
