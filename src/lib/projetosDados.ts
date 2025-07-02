@@ -6,6 +6,7 @@
             items: ["[ Em Progresso!! 🚧]", "Projeto da faculdade de aplicativo para mulheres vítimas de violência doméstica", 
                 "Toda a documentação foi estudada e feita com metodologias ágeis, a prototipagem foi feita no figma. "],
             habilidades: ["Figma", "Flutter", "ui/ux design", "Documentação", "Metodologias Ágeis"],
+            link: "/aurora"
         },
         {
             icon: "/images/projetos/curso.png",
@@ -27,7 +28,7 @@
             items: ["Desenvolvedora front-end e designer na comunidade criada por mulheres e pra mulheres apaixonadas por tecnologia.",
                 " "],
             habilidades: ["Angular", "Congressos","Hackathons"],
-            link:"somostech.tech"
+            link:"https://somostech.tech/home"
         },
         {
             icon: "/images/projetos/logo_digiteam.png",

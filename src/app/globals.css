@@ -46,3 +46,26 @@
   }
 
 
+  @keyframes meteor {
+    0% {
+      transform: translateX(0) translateY(0) rotate(45deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100vw) translateY(100vh) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  
+  .meteor {
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(180deg, white, transparent);
+    border-radius: 9999px;
+    opacity: 0;
+    animation: meteor 2s linear infinite;
+    pointer-events: none;
+    z-index: -10;
+  }
+  

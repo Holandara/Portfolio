@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import Image, { type StaticImageData } from 'next/image';
 import { SoftSkill } from './softskills';
+import Link from 'next/link'
 
 interface ProjetosProps {
   title: string;
@@ -47,27 +48,38 @@ export const Projetos = ({ title, icon, items = [], habilidades, link, github }:
           </ul>
 
           <div className="mt-4">
-            {link && (
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 font-bold bg-purple hover:bg-white p-2 rounded-full px-4 text-white hover:text-black transition"
-              >
-                Conferir
-              </a>
-            )}
-            {github && (
-              <a
-                href={github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-2 font-bold bg-purple hover:bg-white p-2 rounded-full px-4 text-white hover:text-black transition"
-              >
-                Repositório
-              </a>
-            )}
-          </div>
+  {link && link.startsWith('/') ? (
+    // Internal link (like /aurora) - use Next.js Link
+    <Link
+      href={link}
+      className="mt-5 font-bold bg-purple hover:bg-white p-2 rounded-full px-4 text-white hover:text-black transition"
+    >
+      Conferir
+    </Link>
+  ) : link && (
+    // External link - use regular <a> tag
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-5 font-bold bg-purple hover:bg-white p-2 rounded-full px-4 text-white hover:text-black transition"
+    >
+      Conferir
+    </a>
+  )}
+  
+  {/* Keep the GitHub button as is */}
+  {github && (
+    <a
+      href={github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="ml-2 font-bold bg-purple hover:bg-white p-2 rounded-full px-4 text-white hover:text-black transition"
+    >
+      Repositório
+    </a>
+  )}
+</div>
         </div>
       </div>
     </motion.div>
