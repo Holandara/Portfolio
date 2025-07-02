@@ -20,7 +20,7 @@ interface ProjectProps {
 }
 
 interface SkillProps {
-    icon: StaticImageData;
+    icon: StaticImageData; 
     title: string;
     items: string[];
 }
