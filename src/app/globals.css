@@ -46,26 +46,16 @@
   }
 
 
-  @keyframes meteor {
-    0% {
-      transform: translateX(0) translateY(0) rotate(45deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(-100vw) translateY(100vh) rotate(45deg);
-      opacity: 0;
-    }
+  .bg-cyber {
+    background: linear-gradient(-45deg, #0d0d0d, #1a1a2e, #1f0036, #0a0a0a);
+    background-size: 400% 400%;
+    animation: moveGradient 20s ease infinite;
   }
   
-  .meteor {
-    position: absolute;
-    width: 2px;
-    height: 80px;
-    background: linear-gradient(180deg, white, transparent);
-    border-radius: 9999px;
-    opacity: 0;
-    animation: meteor 2s linear infinite;
-    pointer-events: none;
-    z-index: -10;
+  @keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
+  
   
