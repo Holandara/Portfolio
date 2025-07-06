@@ -18,25 +18,47 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 });
 
-export const metadata = {
-  title: 'Sara Holanda Mesquita Tavares - UX Designer e Desenvolvedora Front-end',
+export const metadata: Metadata = {
+  title: 'Sara Holanda - UX Designer e Desenvolvedora Front-end',
   description:
-    'Portfólio profissional de Sara Holanda Mesquita Tavares. Desenvolvedora front-end especializada em React, UI/UX, acessibilidade e design responsivo. Confira projetos, habilidades e contato.',
+    'Portfólio profissional de Sara Holanda Mesquita Tavares. Desenvolvedora front-end especializada em UI/UX, acessibilidade e design responsivo.',
+  applicationName: 'Sara Holanda Portfolio',
+  themeColor: '#0f0f0f',
+  metadataBase: new URL('https://portfolio-sarolanda.vercel.app'),
+  alternates: {
+    canonical: '/',
+  },
   verification: {
     google: 'EItKFM4nQUWYCagMCcN7KgTBDkSN1GFmzTTrEXUg_38',
   },
-  keywords: ['Sara Holanda Mesquita Tavares', 'portfólio', 'frontend', 'UX', 'UX', 'designer', 'desenvolvedora web'],
+  keywords: [
+    'Sara Holanda', 'UX Designer', 'Desenvolvedora Front-end', 'React',
+    'UI/UX', 'Acessibilidade Web', 'Portfólio Desenvolvedora', 'Web Design'
+  ],
   authors: [{ name: 'Sara Holanda Mesquita Tavares' }],
-  creator: 'Sara Holanda Mesquita Tavares',
+  creator: 'Sara Holanda',
   robots: 'index, follow',
   openGraph: {
-    title: 'Sara Holanda Mesquita Tavares - UX Designer e Desenvolvedora Front-end',
+    title: 'Sara Holanda - UX Designer e Front-end Dev',
     description:
-      'Portfólio profissional com projetos em React, UI/UX, acessibilidade e design responsivo.',
-    url: 'https://portfolio-sarolanda.vercel.app/', 
-    siteName: 'Sara Holanda - Portfólio',
+      'Portfólio com projetos em React, acessibilidade, UX e UI para interfaces incríveis.',
+    url: 'https://portfolio-sarolanda.vercel.app/',
+    siteName: 'Sara Holanda Portfolio',
     locale: 'pt_BR',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpeg', 
+        width: 1200,
+        height: 630,
+        alt: 'Portfólio de Sara Holanda',
+      },
+    ],
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
 };
 
