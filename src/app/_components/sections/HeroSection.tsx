@@ -23,7 +23,7 @@ export const HeroSection = ({ currentRoleIndex, roles }: { currentRoleIndex: num
         transition={{ delay: 0.3 }}
         className="mt-2 text-pink-300 font-mono text-lg md:text-xl"
       >
-        Desenvolvedora Front-end & UI Designer
+        Desenvolvedora Front-end & UX/UI Designer
       </motion.p>
 
       {/* Animação de roles dinâmicos */}
@@ -49,7 +49,7 @@ export const HeroSection = ({ currentRoleIndex, roles }: { currentRoleIndex: num
         transition={{ delay: 0.5 }}
         className="mt-6 max-w-xl text-gray-300 text-sm md:text-base"
       >
-        Criando experiências digitais com foco em acessibilidade, estética e performance. Apaixonada por transformar ideias em interfaces intuitivas, pixel a pixel.
+        Apaixonada por transformar ideias em interfaces intuitivas, pixel a pixel.
       </motion.p>
 
       {/* CTA */}

@@ -26,7 +26,7 @@ interface Project {
   }
 export default function HomeClient({ projetos, skills }: { projetos: Project[], skills: Skill[] }) {
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-    const roles = ["Codando ideias", "Criando experiências", "Transformando pixels", "Reactando com estilo"];
+    const roles = ["Foco em Experiência do Usuário (UX)", "Transformando ideias em interfaces", "Experiências que clicam", "Foco no usuário, sempre", "Detalhes que entregam valor"];
   
     useEffect(() => {
       const interval = setInterval(() => {
